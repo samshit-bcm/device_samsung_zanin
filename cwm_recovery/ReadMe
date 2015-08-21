@@ -1,6 +1,7 @@
 =========================================================================================================
 
 CWM Recovery ported.
+
 How to get full animation working.
 1) Override res folder over cwm res folder.
 2) Ovrride ui.c over ui.c from cwm.
