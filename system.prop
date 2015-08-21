@@ -22,8 +22,5 @@ ro.kernel.qemu=0
 
 persist.sys.storage_preload=1
 
-net.streaming.rtsp.uaprof=http://wap.samsungmobile.com/uaprof/
-
 # Multimedia property for Smart View
 media.enable-commonsource=true
-
