@@ -59,16 +59,10 @@ WIFI_BAND                   := 802_11_ABG
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
-# Use this flag if the board has a ext4 partition larger than 2gb
-#BOARD_HAS_LARGE_FILESYSTEM := true
-
 #egl
 BUILD_EMULATOR_OPENGL := true
 BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
 USE_OPENGL_RENDERER := true
-
-# Set /system/bin/sh to ash, not mksh, to make sure we can switch back.
-#TARGET_SHELL := ash
 
 # Enable dex-preoptimization to speed up the first boot sequence
 # of an SDK AVD. Note that this operation only works on Linux for now
@@ -93,7 +87,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/dwc_otg/gadget/lun0/fi
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
-
 
 #adb
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
