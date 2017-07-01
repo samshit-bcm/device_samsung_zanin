@@ -559,5 +559,6 @@ lib/libXIVCoder.so
 lib/libXt9core.so
 lib/libz.so
 lib/modules/dhd.ko
+vendor/gfx.fw
 xbin/dexdump
 xbin/su

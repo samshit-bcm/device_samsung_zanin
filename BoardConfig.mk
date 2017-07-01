@@ -39,7 +39,9 @@ BOARD_HAS_SDCARD_INTERNAL:= true
 #########################################################################
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_SDCARD_INTERNAL := true
-BOARD_CUSTOM_GRAPHICS:= ../../../device/samsung/zanin/recovery/graphics.c
+BOARD_LDPI_RECOVERY := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 #BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/samsung/tassve/recovery/recovery_ui.c
 #########################################################################
 HAVE_HTC_AUDIO_DRIVER := true
