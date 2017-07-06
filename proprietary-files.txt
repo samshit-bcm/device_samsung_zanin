@@ -1,5 +1,6 @@
 bin/applypatch
 bin/at_distributor
+bin/atrace
 bin/atx
 bin/atxd
 bin/BCM4334B0_002.001.013.0602.0616.hcd
@@ -46,10 +47,12 @@ bin/nandread
 bin/netstat
 bin/newfs_msdos
 bin/notify
+bin/npsmobex
 bin/p2p_supplicant
 bin/ps
 bin/reboot
 bin/renice
+bin/rild
 bin/rm
 bin/rmdir
 bin/rmmod
@@ -80,6 +83,8 @@ bin/wipe
 bin/wlandutservice
 bin/wpa_supplicant
 etc/asound.conf
+etc/audio_policy.conf
+etc/DiamondVoice.txt
 etc/atx_rndis.conf
 etc/audio/LVVEFS_Rx_Configuration.txt
 etc/audio/LVVEFS_Tx_Configuration.txt
@@ -118,6 +123,7 @@ etc/audio_VR/Tx_ControlParams_VR_WIRED_HEADSET_WIDEBAND.txt
 etc/gps.conf
 etc/gps/glconfig.xml
 etc/usb_portd.conf
+etc/srm.bin
 etc/Volume.db
 etc/wifi/bcmdhd_apsta.bin_b2
 etc/wifi/bcmdhd_mfg.bin_b2
@@ -163,7 +169,6 @@ lib/lib_ARC_Omx_Plugin.so
 lib/lib_Samsung_Resampler.so
 lib/lib_Samsung_SB_AM_for_ICS_v03008.so
 lib/lib_SamsungRec_V01006.so
-lib/lib_SoundAlive_for_ICS_V01012.so
 lib/lib_SoundAlive_for_ICS_V01013a.so
 lib/lib_SoundAlive_V01013h.so
 lib/libaac_enc_dummy.so
