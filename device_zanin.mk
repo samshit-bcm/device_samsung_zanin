@@ -66,8 +66,9 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-#PRODUCT_COPY_FILES += \
-#	device/samsung/zanin/vold.fstab:system/etc/vold.fstab 
+PRODUCT_COPY_FILES += \
+	device/samsung/zanin/vold.fstab:system/etc/vold.fstab \
+	evice/samsung/zanin/vold.conf:system/etc/vold.conf 
 
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
