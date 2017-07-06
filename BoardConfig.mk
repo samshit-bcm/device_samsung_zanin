@@ -67,7 +67,7 @@ USE_OPENGL_RENDERER := true
 # Enable dex-preoptimization to speed up the first boot sequence
 # of an SDK AVD. Note that this operation only works on Linux for now
 ifeq ($(HOST_OS),linux)
-WITH_DEXPREOPT := true
+WITH_DEXPREOPT := false
 endif
 
 #audio
@@ -95,4 +95,3 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.service.adb.enable=1
 ADDITIONAL_DEFAULT_PROPERTIES += ro.config.sec_storage=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
-
