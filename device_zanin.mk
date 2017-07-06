@@ -7,6 +7,9 @@ $(call inherit-product-if-exists, vendor/samsung/zanin/zanin-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/zanin/overlay
 
+# LDPI assets
+PRODUCT_AAPT_CONFIG := normal ldpi mdpi nodpi
+
 # HAL libs and other system binaries
 PRODUCT_PACKAGES += \
     	brcm_patchram_plus \
@@ -34,6 +37,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/zanin/init/init.bt.rc:root/init.bt.rc \
     device/samsung/zanin/init/init.log.rc:root/init.log.rc\
     device/samsung/zanin/init/init.rhea_ss_zanin.rc:root/init.rhea_ss_zanin.rc \
+    device/samsung/zanin/init/init.recovery.rhea_ss_zanin.rc:root/init.recovery.rhea_ss_zanin.rc \
     device/samsung/zanin/init/init.zram.sh:root/init.zram.sh \
     device/samsung/zanin/init/lpm.rc:root/lpm.rc \
     device/samsung/zanin/init/sec_param.ko:root/sec_param.ko \
@@ -66,8 +70,9 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
 	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-#PRODUCT_COPY_FILES += \
-#	device/samsung/zanin/vold.fstab:system/etc/vold.fstab 
+PRODUCT_COPY_FILES += \
+	device/samsung/zanin/vold.fstab:system/etc/vold.fstab \
+	device/samsung/corsica/vold.conf:system/etc/vold.conf
 
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
