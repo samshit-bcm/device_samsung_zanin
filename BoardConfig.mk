@@ -14,7 +14,6 @@ TARGET_BOARD_PLATFORM := rhea
 #BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 mem=480M gpt pmem=112M carveout=18M androidboot.console=ttyS1
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 4096
-#COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB -DSAMSUNG_BCM_AUDIO_BLOB
 #BOARD_BLUEDROID_VENDOR_CONF := device/samsung/zanin/libbt_vndcfg.txt
 #Assert
 TARGET_OTA_ASSERT_DEVICE := zanin
@@ -63,6 +62,8 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BUILD_EMULATOR_OPENGL := true
 BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
 USE_OPENGL_RENDERER := true
+BOARD_EGL_NEEDS_LEGACY_FB := true
+COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
 
 # Enable dex-preoptimization to speed up the first boot sequence
 # of an SDK AVD. Note that this operation only works on Linux for now
@@ -73,6 +74,7 @@ endif
 #audio
 BOARD_USES_ALSA_AUDIO := true
 BRCM_ALSA_LIB_DIR=device/samsung/bcm_common/alsa-lib
+COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB -DSAMSUNG_BCM_AUDIO_BLOB
 
 #recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
