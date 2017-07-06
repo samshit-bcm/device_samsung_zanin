@@ -89,10 +89,18 @@ PRODUCT_PACKAGES += \
 #Keyboard
 PRODUCT_PACKAGES += \
     device/samsung/zanin/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
+    device/samsung/zanin/keychars/bcm_keypad_v2.kcm:system/usr/keychars/bcm_keypad_v2.kcm \
     device/samsung/zanin/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
     device/samsung/zanin/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
     device/samsung/zanin/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm \
+    device/samsung/zanin/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/samsung/zanin/keylayout/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
+    device/samsung/zanin/keylayout/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
     device/samsung/zanin/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
+    device/samsung/zanin/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/samsung/zanin/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/samsung/zanin/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
+    device/samsung/zanin/keylayout/Zinitix_tsp.kl:system/usr/keylayout/Zinitix_tsp.kl \
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_zanin
