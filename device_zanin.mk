@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
 	audio.usb.default
 
 #Keyboard
-PRODUCT_PACKAGES += \
+PRODUCT_COPY_FILES += \
     device/samsung/zanin/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
     device/samsung/zanin/keychars/bcm_keypad_v2.kcm:system/usr/keychars/bcm_keypad_v2.kcm \
     device/samsung/zanin/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
@@ -100,7 +100,7 @@ PRODUCT_PACKAGES += \
     device/samsung/zanin/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/samsung/zanin/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/samsung/zanin/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
-    device/samsung/zanin/keylayout/Zinitix_tsp.kl:system/usr/keylayout/Zinitix_tsp.kl \
+    device/samsung/zanin/keylayout/Zinitix_tsp.kl:system/usr/keylayout/Zinitix_tsp.kl
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_zanin

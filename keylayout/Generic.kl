@@ -121,7 +121,7 @@ key 98    NUMPAD_DIVIDE
 key 99    SYSRQ
 key 100   ALT_RIGHT
 # key 101 "KEY_LINEFEED"
-key 102   MOVE_HOME             WAKE
+key 102   HOME				WAKE
 key 103   DPAD_UP
 key 104   PAGE_UP
 key 105   DPAD_LEFT
@@ -141,7 +141,7 @@ key 117   NUMPAD_EQUALS
 key 119   BREAK
 # key 120 (undefined)
 key 121   NUMPAD_COMMA
-key 122   LANG
+key 122   KANA
 key 123   EISU
 key 124   YEN
 key 125   META_LEFT
@@ -191,7 +191,7 @@ key 168   MEDIA_REWIND
 key 169   CALL
 # key 170 "KEY_ISO"
 key 171   MUSIC
-key 172   HOME
+key 172   MOVE_HOME
 # key 173 "KEY_REFRESH"
 # key 174 "KEY_EXIT"
 # key 175 "KEY_MOVE"
@@ -243,8 +243,8 @@ key 217   SEARCH
 # key 221 "KEY_SHOP"
 # key 222 "KEY_ALTERASE"
 # key 223 "KEY_CANCEL"
-key 224   BRIGHTNESS_DOWN
-key 225   BRIGHTNESS_UP
+# key 224 "KEY_BRIGHTNESSDOWN"
+# key 225 "KEY_BRIGHTNESSUP"
 key 226   HEADSETHOOK
 
 key 256   BUTTON_1
@@ -300,7 +300,7 @@ key 318   BUTTON_THUMBR
 
 
 # key 352 "KEY_OK"
-# key 353   DPAD_CENTER
+key 353   DPAD_CENTER
 # key 354 "KEY_GOTO"
 # key 355 "KEY_CLEAR"
 # key 356 "KEY_POWER2"
