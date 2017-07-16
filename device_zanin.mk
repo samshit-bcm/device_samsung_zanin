@@ -27,7 +27,6 @@ LOCAL_PATH := device/samsung/zanin
 
 #boot
 PRODUCT_COPY_FILES += \
-    device/samsung/zanin/init/init.rc:root/init.rc \
     device/samsung/zanin/init/fstab.rhea_ss_zanin:root/fstab.rhea_ss_zanin \
     device/samsung/zanin/init/init.bcm2165x.usb.rc:root/init.bcm2165x.usb.rc \
     device/samsung/zanin/init/init.bt.rc:root/init.bt.rc \
