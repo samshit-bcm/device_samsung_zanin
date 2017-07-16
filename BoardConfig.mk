@@ -14,7 +14,7 @@ TARGET_BOARD_PLATFORM := rhea
 #BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 mem=480M gpt pmem=112M carveout=18M androidboot.console=ttyS1
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 4096
-#BOARD_BLUEDROID_VENDOR_CONF := device/samsung/zanin/libbt_vndcfg.txt
+
 #Assert
 TARGET_OTA_ASSERT_DEVICE := zanin
 
@@ -83,6 +83,9 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_LDPI_RECOVERY := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+
+# RIL
+BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril/
 
 # UMS
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
