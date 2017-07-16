@@ -15,10 +15,12 @@ on init
     chmod 1775 /tmp
 
     # See storage config details at http://source.android.com/tech/storage/
-    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /mnt/shell/emulated 0775 root sdcard_rw 
     mkdir /storage/emulated 0555 root root
+    mkdir /storage/sdcard1 0775 system system
 
     export EXTERNAL_STORAGE /storage/emulated/legacy
+    export SECONDARY_STORAGE /storage/sdcard1
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
     export EMULATED_STORAGE_TARGET /storage/emulated
 
@@ -27,10 +29,8 @@ on init
     symlink /storage/emulated/legacy /mnt/sdcard
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
-
-    export SECONDARY_STORAGE /storage/sdcard1
-    mkdir /storage/sdcard1 0777 system system
-    symlink /storage/sdcard1 /mnt/external_sd
+    symlink /storage/sdcard1 /ext_card
+    symlink /storage/sdcard1 /mnt/ext_card
 
     symlink /efs /factory
 
@@ -40,7 +40,6 @@ on init
 on post-fs-data
 # we will remap this as /storage/sdcard with the sdcard fuse tool
     mkdir /data/media 0770 media_rw media_rw
-    chown media_rw media_rw /data/media
 
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
@@ -485,7 +484,7 @@ service ril-daemon /system/bin/rild
 # create virtual SD card at /storage/sdcard, based on the /data/media directory
 # daemon will drop to user/group system/media_rw after initializing
 # underlying files in /data/media will be created with user and group media_rw (1023)
-service sdcard /system/bin/sdcard /data/media 1023 1023
+service sdcard /system/bin/sdcard /data/media /mnt/shell/emulated 1023 1023
     class late_start
 
 
