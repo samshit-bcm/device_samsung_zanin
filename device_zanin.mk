@@ -19,15 +19,14 @@ PRODUCT_PACKAGES += \
     	screencap 
 
 LOCAL_PATH := device/samsung/zanin
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+# ifeq ($(TARGET_PREBUILT_KERNEL),)
+# 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+# else
+# 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+# endif
 
 #boot
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel \
     device/samsung/zanin/init/init.rc:root/init.rc \
     device/samsung/zanin/init/fstab.rhea_ss_zanin:root/fstab.rhea_ss_zanin \
     device/samsung/zanin/init/init.bcm2165x.usb.rc:root/init.bcm2165x.usb.rc \

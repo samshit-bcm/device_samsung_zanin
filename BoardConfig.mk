@@ -11,7 +11,6 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_BOOTLOADER_BOARD_NAME := zanin
 TARGET_BOARD_PLATFORM := rhea
-#BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 mem=480M gpt pmem=112M carveout=18M androidboot.console=ttyS1
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 4096
 
@@ -26,7 +25,11 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2236070912
 BOARD_CACHEIMAGE_PARTITION_SIZE := 536870912
 BOARD_FLASH_BLOCK_SIZE := 4096
 
-TARGET_PREBUILT_KERNEL := device/samsung/zanin/kernel
+# Kernel
+BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 mem=480M gpt pmem=112M carveout=18M androidboot.console=ttyS1
+TARGET_KERNEL_SOURCE := kernel/samsung/zanin
+TARGET_KERNEL_CONFIG := cyanogenmod_zanin_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 ###############
 
 ENABLE_WEBGL := true
