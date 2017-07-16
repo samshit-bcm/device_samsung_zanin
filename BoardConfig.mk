@@ -88,7 +88,7 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 # RIL
-BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril/
+BOARD_RIL_CLASS := ../../../device/samsung/zanin/ril/
 
 # UMS
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
