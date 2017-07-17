@@ -29,7 +29,6 @@ LOCAL_PATH := device/samsung/zanin
 PRODUCT_COPY_FILES += \
     device/samsung/zanin/init/fstab.rhea_ss_zanin:root/fstab.rhea_ss_zanin \
     device/samsung/zanin/init/init.bcm2165x.usb.rc:root/init.bcm2165x.usb.rc \
-    device/samsung/zanin/init/init.bt.rc:root/init.bt.rc \
     device/samsung/zanin/init/init.log.rc:root/init.log.rc\
     device/samsung/zanin/init/init.rhea_ss_zanin.rc:root/init.rhea_ss_zanin.rc \
     device/samsung/zanin/init/init.zram.sh:root/init.zram.sh \
