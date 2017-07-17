@@ -15,7 +15,7 @@ on init
     chmod 1775 /tmp
 
     # See storage config details at http://source.android.com/tech/storage/
-    mkdir /mnt/shell/emulated 0775 root sdcard_rw 
+    mkdir /mnt/shell/emulated 0777 root sdcard_rw 
     mkdir /storage/emulated 0555 root root
     mkdir /storage/sdcard1 0775 system system
 
