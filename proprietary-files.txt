@@ -21,7 +21,6 @@ bin/glgps
 bin/gps.cer
 bin/gpslogd
 bin/hd
-bin/hostapd
 bin/id
 bin/ifconfig
 bin/iftop
@@ -36,7 +35,6 @@ bin/lpmkey
 bin/ls
 bin/lsmod
 bin/lsof
-bin/macloader
 bin/md5
 bin/mfgloader
 bin/mkdir
@@ -81,7 +79,6 @@ bin/watchdogd
 bin/watchprops
 bin/wipe
 bin/wlandutservice
-bin/wpa_supplicant
 etc/asound.conf
 etc/audio_policy.conf
 etc/DiamondVoice.txt
@@ -131,7 +128,6 @@ etc/wifi/bcmdhd_p2p.bin_b2
 etc/wifi/bcmdhd_sta.bin_b2
 etc/wifi/nvram_mfg.txt
 etc/wifi/nvram_net.txt
-etc/wifi/wpa_supplicant.conf
 lib/bluez-plugin/audio.so
 lib/bluez-plugin/bluetooth-health.so
 lib/bluez-plugin/input.so
