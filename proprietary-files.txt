@@ -119,6 +119,7 @@ etc/audio_VR/Tx_ControlParams_VR_WIRED_HEADSET_WIDEBAND.txt
 etc/DiamondVoice.txt
 etc/gps.conf
 etc/gps/glconfig.xml
+etc/media_codecs.xml
 etc/srm.bin
 etc/usb_portd.conf
 etc/Volume.db
