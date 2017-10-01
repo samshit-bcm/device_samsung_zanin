@@ -287,8 +287,6 @@ lib/libremotedesktop_client.so
 lib/libremotedesktopservice.so
 lib/libril.so
 lib/librpc.so
-lib/libRS.so
-lib/librs_jni.so
 lib/librtp_jni.so
 lib/libsamsungRecord.so
 lib/libsamsungSoundbooster.so
