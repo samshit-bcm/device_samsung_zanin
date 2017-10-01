@@ -80,8 +80,6 @@ bin/watchprops
 bin/wipe
 bin/wlandutservice
 etc/asound.conf
-etc/audio_policy.conf
-etc/DiamondVoice.txt
 etc/atx_rndis.conf
 etc/audio/LVVEFS_Rx_Configuration.txt
 etc/audio/LVVEFS_Tx_Configuration.txt
@@ -105,6 +103,7 @@ etc/audio/Tx_ControlParams_SECVOIP_WIRED_HEADSET_WIDEBAND.txt
 etc/audio/Tx_ControlParams_SPEAKER_WIDEBAND.txt
 etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt
 etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt
+etc/audio_policy.conf
 etc/audio_VR/LVVEFS_Rx_Configuration.txt
 etc/audio_VR/LVVEFS_Tx_Configuration.txt
 etc/audio_VR/Rx_ControlParams_VR_BLUETOOTH_HEADSET.txt
@@ -117,10 +116,11 @@ etc/audio_VR/Tx_ControlParams_VR_EARPIECE_WIDEBAND.txt
 etc/audio_VR/Tx_ControlParams_VR_SPEAKER_WIDEBAND.txt
 etc/audio_VR/Tx_ControlParams_VR_WIRED_HEADPHONE_WIDEBAND.txt
 etc/audio_VR/Tx_ControlParams_VR_WIRED_HEADSET_WIDEBAND.txt
+etc/DiamondVoice.txt
 etc/gps.conf
 etc/gps/glconfig.xml
-etc/usb_portd.conf
 etc/srm.bin
+etc/usb_portd.conf
 etc/Volume.db
 etc/wifi/bcmdhd_apsta.bin_b2
 etc/wifi/bcmdhd_mfg.bin_b2
