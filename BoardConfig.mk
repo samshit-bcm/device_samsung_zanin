@@ -19,6 +19,9 @@ TARGET_BOARD_PLATFORM := rhea
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 4096
 
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfloat-abi=softfp
+
 #Assert
 TARGET_OTA_ASSERT_DEVICE := zanin
 
@@ -72,6 +75,7 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/zanin/libbt_vndcfg.txt
 BUILD_EMULATOR_OPENGL := true
 BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
 USE_OPENGL_RENDERER := true
+HWUI_COMPILE_FOR_PERF := true
 BOARD_EGL_NEEDS_LEGACY_FB := true
 COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
 
