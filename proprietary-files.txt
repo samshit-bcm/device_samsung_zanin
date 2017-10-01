@@ -157,7 +157,6 @@ lib/hw/gralloc.rhea.so
 lib/hw/hwcomposer.rhea.so
 lib/hw/keystore.default.so
 lib/hw/lights.goldfish.so
-lib/hw/lights.rhea.so
 lib/hw/local_time.default.so
 lib/hw/power.default.so
 lib/hw/power.goldfish.so
