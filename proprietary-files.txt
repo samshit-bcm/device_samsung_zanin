@@ -120,6 +120,7 @@ etc/DiamondVoice.txt
 etc/gps.conf
 etc/gps/glconfig.xml
 etc/media_codecs.xml
+etc/media_profiles.xml
 etc/srm.bin
 etc/usb_portd.conf
 etc/Volume.db
