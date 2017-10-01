@@ -92,6 +92,10 @@ PRODUCT_COPY_FILES += \
 	device/samsung/zanin/vold.fstab:system/etc/vold.fstab \
 	device/samsung/ivoryss/vold.conf:system/etc/vold.conf
 
+# LDPI assets
+PRODUCT_AAPT_CONFIG := normal ldpi mdpi nodpi
+PRODUCT_AAPT_PREF_CONFIG := ldpi
+
 # MTP
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
