@@ -6,7 +6,7 @@ $(call inherit-product, vendor/cm/config/themes_common.mk)
 PRODUCT_RELEASE_NAME := zanin
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/zanin/device_zanin.mk)
