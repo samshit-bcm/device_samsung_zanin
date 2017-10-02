@@ -298,8 +298,18 @@ on boot
     chmod 0777 /data/DiamondVoice_Filter.txt
     insmod /system/lib/modules/VoiceSolution.ko
 
+# Disable swap page clustering -- recommended in https://source.android.com/devices/low-ram.html
+    write /proc/sys/vm/page-cluster 0
+
+# Swap tweaks
+    write /proc/sys/vm/swappiness 70
+    write /proc/sys/vm/dirty_background_ratio 5
+    write /proc/sys/vm/dirty_expire_centisecs 200
+    write /proc/sys/vm/min_free_order_shift 4
+
 on fs
     mount_all /fstab.rhea_ss_zanin
+    swapon_all fstab.rhea_ss_zanin
     setprop ro.crypto.fuse_sdcard true
 
 # For NV Read/Write 
