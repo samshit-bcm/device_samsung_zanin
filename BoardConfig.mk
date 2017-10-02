@@ -37,7 +37,9 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 mem=480M gpt pmem=112M carveout=18M androidboot.console=ttyS1
 TARGET_KERNEL_SOURCE := kernel/samsung/zanin
 TARGET_KERNEL_CONFIG := cyanogenmod_zanin_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin
+
 ###############
 
 ENABLE_WEBGL := true
