@@ -152,7 +152,6 @@ lib/hw/gps.rhea.so
 lib/hw/gralloc.default.so
 lib/hw/gralloc.rhea.so
 lib/hw/hwcomposer.rhea.so
-lib/hw/keystore.default.so
 lib/hw/local_time.default.so
 lib/hw/power.default.so
 lib/hw/sensors.rhea.so
@@ -305,7 +304,6 @@ lib/libsig.so
 lib/libsoc.so
 lib/libsoundalive.so
 lib/libSoundAlive_VSP_ver312a.so
-lib/libsoundpool.so
 lib/libsoundspeed.so
 lib/libspeexwrapper.so
 lib/libstagefright_strm_snooper.so
