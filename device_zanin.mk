@@ -86,11 +86,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Default=true for development builds, set by android buildsystem.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
-	dalvik.vm.checkjni=false	
-
-PRODUCT_COPY_FILES += \
-	device/samsung/zanin/vold.fstab:system/etc/vold.fstab \
-	device/samsung/ivoryss/vold.conf:system/etc/vold.conf
+	dalvik.vm.checkjni=false
 
 # LDPI assets
 PRODUCT_AAPT_CONFIG := normal ldpi mdpi nodpi
