@@ -88,14 +88,13 @@ WITH_DEXPREOPT := false
 endif
 
 #audio
-BOARD_USES_ALSA_AUDIO := true
-BRCM_ALSA_LIB_DIR=device/samsung/bcm_common/alsa-lib
 COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB -DSAMSUNG_BCM_AUDIO_BLOB
 
 # LightHAL
 TARGET_PROVIDES_LIBLIGHT := true
 
 #recovery
+TARGET_RECOVERY_FSTAB := device/samsung/zanin/init/fstab.rhea_ss_zanin
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_LDPI_RECOVERY := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
