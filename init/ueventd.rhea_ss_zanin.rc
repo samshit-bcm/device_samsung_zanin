@@ -9,18 +9,18 @@
 /dev/i2c-1                0660   system     camera
 /dev/i2c-2                0660   system     camera
 
-#for V3D
+# for V3D
 /dev/v3d                  0666   system     graphics
 /dev/pmem                 0666   system     graphics
 
-#for VCE
+# for VCE
 /dev/vce                  0666   system     graphics
 
 # Permission for NV partition 
 /dev/block/mmcblk0p18	  0770	 radio	    system
 
 # SYSTEM Status
-/dev/block/mmcblk0p11        0660   system     root  
+/dev/block/mmcblk0p11     0660   system     root  
 
 # wifi
 /dev/rfkill               0660   root       wifi
@@ -28,4 +28,4 @@
 # Misc
 /dev/mem                  0660   system     root
 /dev/ttyGS0               0660   system     system
-/dev/snd/controlC0        0660   system     audio
+/dev/snd/controlC0 0660 system audio

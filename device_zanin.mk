@@ -16,7 +16,14 @@ PRODUCT_PACKAGES += \
     	dump_image \
     	e2fsck \
     	setup_fs \
-    	screencap 
+    	screencap \
+    	libnetcmdiface
+
+# Support for Browser's saved page feature. This allows
+# for pages saved on previous versions of the OS to be
+# viewed on the current OS.
+PRODUCT_PACKAGES += \
+    libskia_legacy
 
 LOCAL_PATH := device/samsung/zanin
 # ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -70,7 +77,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     mobiledata.interfaces=rmnet0 \
-	ro.telephony.ril_class=SamsungBCMRIL
+    ro.telephony.ril_class=SamsungBCMRIL \
+    ro.zygote.disable_gl_preload=true \
+    persist.radio.multisim.config=dsds \
+    ro.telephony.call_ring.multiple=0 \
+    ro.telephony.call_ring=0 \
+    ro.config.low_ram=true
 
 
 # enable Google-specific location features,
@@ -110,6 +122,7 @@ PRODUCT_PACKAGES += \
 	audio.usb.default
 
 # Wifi
+$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 PRODUCT_PACKAGES += \
 	macloader \
 	dhcpcd.conf \
@@ -117,7 +130,6 @@ PRODUCT_PACKAGES += \
 	libnetcmdiface \
 	wpa_supplicant \
 	wpa_supplicant.conf
-
 
 #Keyboard
 PRODUCT_COPY_FILES += \
@@ -134,6 +146,17 @@ PRODUCT_COPY_FILES += \
     device/samsung/zanin/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/samsung/zanin/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
     device/samsung/zanin/keylayout/Zinitix_tsp.kl:system/usr/keylayout/Zinitix_tsp.kl
+
+
+# Media Codecs
+PRODUCT_COPY_FILES += \
+	device/samsung/zanin/configs/etc/media_codecs.xml:system/etc/media_codecs.xml \
+	device/samsung/zanin/configs/etc/media_profiles.xml:system/etc/media_profiles.xml \
+	device/samsung/zanin/configs/etc/audio_policy.conf:system/etc/audio_policy.conf
+
+# Init.d files
+PRODUCT_COPY_FILES += \
+    device/samsung/zanin/init/swap:system/etc/init.d/swap
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_zanin

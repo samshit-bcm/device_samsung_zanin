@@ -6,6 +6,7 @@ bin/atxd
 bin/BCM4334B0_002.001.013.0602.0616.hcd
 bin/bcm_dut
 bin/bkmgrd
+bin/bluetoothd
 bin/brcm_patchram_plus
 bin/cat
 bin/cate_rpc_util
@@ -119,8 +120,6 @@ etc/audio_VR/Tx_ControlParams_VR_WIRED_HEADSET_WIDEBAND.txt
 etc/DiamondVoice.txt
 etc/gps.conf
 etc/gps/glconfig.xml
-etc/media_codecs.xml
-etc/media_profiles.xml
 etc/srm.bin
 etc/usb_portd.conf
 etc/Volume.db
@@ -217,6 +216,7 @@ lib/libexifa.so
 lib/libext2_quota.so
 lib/libfacerecognition.so
 lib/libFaceRecognition_JNI.so
+lib/libfactoryutil.so
 lib/libfilterpack_facedetect.so
 lib/libfmradio_jni.so
 lib/libFraunhoferAAC.so
@@ -300,6 +300,7 @@ lib/libsecjpeginterface.so
 lib/libseckeyprov.so
 lib/libsecmediarecorder_jni.so
 lib/libsecnativefeature.so
+lib/libsecril-client.so
 lib/libsig.so
 lib/libsoc.so
 lib/libsoundalive.so
