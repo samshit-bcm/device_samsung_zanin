@@ -1,11 +1,10 @@
-# mount point	fstype    device    	[device2]
-/boot	    emmc        /dev/block/platform/sdhci.1/by-name/KERNEL
-/radio      emmc        /dev/block/platform/sdhci.1/by-name/MODEM
-/system     ext4        /dev/block/platform/sdhci.1/by-name/system
-/data       ext4        /dev/block/platform/sdhci.1/by-name/userdata
-/cache      ext4        /dev/block/platform/sdhci.1/by-name/CSC
-/recovery   emmc        /dev/block/platform/sdhci.1/by-name/RECOVERY
-/efs        ext4        /dev/block/platform/sdhci.1/by-name/efs                            
-/preload    ext4        /dev/block/platform/sdhci.1/by-name/HIDDEN
+# mount point	fstype		device					device2
+/efs			  ext4		/dev/block/mmcblk0p3
+/boot		  	emmc		/dev/block/mmcblk0p5
+/recovery		emmc		/dev/block/mmcblk0p6
+/cache			ext4		/dev/block/mmcblk0p8
+/system			ext4		/dev/block/mmcblk0p9
+/data			  ext4		/dev/block/mmcblk0p12	length=-16384
+/preload		ext4		/dev/block/mmcblk0p10
 /sdcard     datamedia   /dev/null
-/external_sd vfat       /dev/block/mmcblk1 /dev/block/mmcblk1p1 
+/external_sd vfat /dev/block/mmcblk1p1 /dev/block/mmcblk1
