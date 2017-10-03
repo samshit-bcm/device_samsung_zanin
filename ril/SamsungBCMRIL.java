@@ -43,7 +43,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
     public SamsungBCMRIL(Context context, int networkMode,
             int cdmaSubscription, Integer instanceId) {
         super(context, networkMode, cdmaSubscription, instanceId);
-        mQANElements = 5;
+        mQANElements = 6;
     }
 
     public void
@@ -123,7 +123,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
         invokeOemRilRequestRaw(new byte[] { 'B', 'R', 'C', 'M', key, value }, response);
     }
 
-    protected void
+    protected RILRequest
     processSolicited (Parcel p) {
         int serial, error;
 
@@ -137,7 +137,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
         if (rr == null) {
             Rlog.w(RILJ_LOG_TAG, "Unexpected solicited response! sn: "
                             + serial + " error: " + error);
-            return;
+            return null;
         }
 
         Object ret = null;
@@ -281,8 +281,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
                     AsyncResult.forMessage(rr.mResult, null, tr);
                     rr.mResult.sendToTarget();
                 }
-            rr.release();
-            return;
+                return rr;
             }
         }
 
@@ -310,8 +309,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
 
         if (error != 0) {
             rr.onError(error, ret);
-            rr.release();
-            return;
+            return rr;
         }
 
         if (RILJ_LOGD) riljLog(rr.serialString() + "< " + requestToString(rr.mRequest)
@@ -322,7 +320,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
             rr.mResult.sendToTarget();
         }
 
-            rr.release();
+        return rr;
     }
 
     @Override
